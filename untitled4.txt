@@ -1,0 +1,24 @@
+#公司名單和其財富
+companies = [
+    {"rank": 1, "name": "Apple", "worth": "2.4 trillion USD"},
+    {"rank": 2, "name": "Microsoft", "worth": "2.2 trillion USD"},
+    {"rank": 3, "name": "Saudi Aramco", "worth": "2.0 trillion USD"},
+    {"rank": 4, "name": "Amazon", "worth": "1.7 trillion USD"},
+    {"rank": 5, "name": "Meta Platforms (formerly Facebook)", "worth": "1.0 trillion USD"},
+    {"rank": 6, "name": "Alphabet (Google)", "worth": "0.9 trillion USD"},
+    {"rank": 7, "name": "Tencent", "worth": "0.8 trillion USD"},
+    {"rank": 8, "name": "Alibaba", "worth": "0.7 trillion USD"},
+    {"rank": 9, "name": "Tesla", "worth": "0.7 trillion USD"},
+    {"rank": 10, "name": "Berkshire Hathaway", "worth": "0.6 trillion USD"},
+]
+
+#將公司信息轉換成HTML格式
+html_content = "<h1>世界前10大有錢公司</h1>"
+html_content += "<ol>"
+for company in companies:
+    html_content += f"<li>排名：{company['rank']}，公司：{company['name']}，財富：{company['worth']}</li>"
+html_content += "</ol>"
+
+#將HTML內容寫入到一個HTML文件中
+with open("top_10_companies.html", "w", encoding="utf-8") as file:
+    file.write(html_content)
